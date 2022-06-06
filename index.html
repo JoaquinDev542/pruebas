@@ -11,11 +11,9 @@
     <style>
 
         /* Body */
-
         body {
             font-family: sans-serif;
-
-            padding: 50px;
+            box-sizing: border-box;
         }
 
         /* Container Section */
@@ -24,8 +22,8 @@
             align-items: center;
             justify-content: center; 
             flex-direction: column;  
-            gap: 15px;
-            padding: 20px; 
+            gap: 30px;
+            padding: 30px; 
         }
 
         /* SocialMedia Section */
@@ -41,8 +39,6 @@
         }
 
         /* MenuFooter Section */
-
-
         .listContainer__list {
             display: flex;
             flex-direction: column;
@@ -54,7 +50,8 @@
 
         .listContainer__item {
             list-style-type: none;
-            margin: 24px  0;
+            margin: 12px  0;
+            font-size: 14px;
         }
 
         .listContainer__link {
@@ -65,6 +62,43 @@
             transition: .2s color;
         }
 
+        /* ContactUs Section */
+        .contactUs {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contactUs__email , .contactUs__place {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contactUs__img {
+            display: block;
+            object-fit: cover;
+            
+        }
+        
+        .contactUs__link {
+            color: #000;
+            text-decoration: none;
+            font-size: 14px;
+            margin-left: 10px;
+            transition: .2s color;
+        }
+
+        .contactUs__span {
+            display: block;
+            font-size: 14px;
+            margin-left: 10px;
+
+        }
+
+        /* Media Screen Min-width Section */
         @media screen  and (min-width: 768px) {
             .listContainer__list {
                 display: flex;
@@ -77,9 +111,10 @@
 
         }
 
+        /* Media Screen Hover Section */
         @media screen and (hover: hover) {
     
-            .listContainer__link:hover {
+            .listContainer__link:hover , .contactUs__link:hover {
                 color: #05050580;
             }
             
@@ -129,9 +164,28 @@
     
         </section>
 
-    </section>
+        <section class="contactUs">
 
-   
+            <div class="contactUs__email">
+
+                <svg class="contactUs__img" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 21h-24v-18h24v18zm-23-16.477v15.477h22v-15.477l-10.999 10-11.001-10zm21.089-.523h-20.176l10.088 9.171 10.088-9.171z"/></svg>
+
+                <a href="mailto:airemarok@gmail.com" class="contactUs__link">airemarok@gmail.com</a>
+
+            </div>
+
+            <div class="contactUs__place">
+
+                <svg class="contactUs__img" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 10c-1.104 0-2-.896-2-2s.896-2 2-2 2 .896 2 2-.896 2-2 2m0-5c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3m-7 2.602c0-3.517 3.271-6.602 7-6.602s7 3.085 7 6.602c0 3.455-2.563 7.543-7 14.527-4.489-7.073-7-11.072-7-14.527m7-7.602c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602"/></svg>
+
+                <span class="contactUs__span">Buenos Aires 2481 oficina 602</span>
+
+
+            </div>
+
+        </section>
+
+    </section>
 
 </body>
 </html> 
